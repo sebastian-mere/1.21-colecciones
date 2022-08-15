@@ -1,0 +1,730 @@
+/* Reset */
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Estilo textos */
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1{
+    font-size: 35px;
+}
+
+a{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+}
+
+/* Estilos Header */
+
+header{
+    position: sticky;
+    top: -100vh;
+    z-index: 1;
+}
+
+.banner{
+    background-image: url("../img/header.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cita{
+    flex-direction: column;
+}
+
+.citaTexto{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: left;
+    color: #fff;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.500);
+}
+.citaFirma{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    text-align: right;
+    color: #fff;
+    padding-top: 10px;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.500);
+}
+
+.material-icons{
+    color: #fff;
+    position: absolute;
+    top: 90vh;
+    font-size: 2.5rem;
+}
+
+/* Estilos menú principal */
+
+.logo{
+    height: 60px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 80px;
+}
+
+header nav ul li{
+    font-size: 21px;
+    font-weight:500;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+header nav ul li a{
+    color: #fff;
+}
+
+header nav ul li a:hover{
+    color: #437cbf;
+    transition: .5s ease;
+}
+
+.activo{
+    color: #437cbf;
+}
+
+/* Estilos contenido principal */
+
+
+.intro{
+    line-height: 1.5rem;
+    padding: 50px 80px;
+    display: grid;
+    grid-template-areas: "intro intro intro"
+                         "caja1 caja2 caja3";
+    gap: 2rem;
+}
+
+.introTexto{
+    grid-area: intro;
+}
+
+.caja1{
+    grid-area: caja1;
+}
+
+.caja2{
+    grid-area: caja2;
+}
+
+.caja3{
+    grid-area: caja3;
+}
+
+.intro h1{
+    padding-bottom: 30px;
+}
+
+.intro p{
+    font-size: 20px;
+}
+
+.introCaja{
+    border-bottom: 2px solid #437cbf;
+}
+
+.introCaja img{
+    display: block;
+    margin: auto;
+    width: 100px;
+}
+
+.introCaja h3{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.introCaja p{
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.contenido{
+    padding: 50px 80px;
+    line-height: 1.5rem;
+    display: grid;
+    grid-template-areas: "videoFDM textoDer"
+                         "textoIzq videoDLP";
+    gap: 2rem;
+    align-items: center;
+}
+
+.textoDer{
+    text-align: left;
+    grid-area: textoDer;
+}
+
+.textoIzq{
+    text-align: right;
+    grid-area: textoIzq;
+}
+
+.cajaContenido h2{
+    padding: 10px 0;
+}
+
+.cajaContenido p{
+    padding: 10px 0;
+}
+
+.contenido iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.videoFDM{
+    grid-area: videoFDM;
+}
+
+.videoDLP{
+    grid-area: videoDLP;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    background-color: #437dbf23;
+    padding: 50px 80px;
+    gap: 2rem;
+}
+
+.galeria img{
+    display: block;
+    width: 100%;
+}
+
+.itemGaleria{
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:#437dbfb2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.itemGaleria:hover .overlay{
+    opacity: 1;
+}
+
+.itemGaleria:hover img{
+    filter: blur(3px);
+}
+
+.galeria p{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+/* Consultanos */
+
+.call{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #437cbf;
+    padding: 20px;
+    font-size: 21px;
+
+}
+
+.call p{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.callBoton{
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-left: 25px;
+    padding: 10px 30px;
+}
+
+.callBoton a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #437cbf;
+}
+
+/* Botón Whatsapp*/
+
+.whatsapp{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+
+/* Estilos Footer */
+
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 10px 50px;
+}
+
+footer nav ul li{
+    font-size: 20px;
+    font-weight:300;
+    margin: 20px;
+    display: inline-block;
+    
+}
+
+footer nav ul li a{
+    color: #fff;
+}
+
+footer p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    margin: 10px;
+}
+
+.social{
+    margin: 30px;
+}
+
+.social a{
+    padding: 0 10px;
+}
+
+/* Nosotros */
+
+.menuPages{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 80px;
+    position: sticky;
+    top: 0;
+}
+
+.bannerPages{
+    width: 100%;
+}
+
+.quienesSomos{
+    padding: 50px 80px;
+    display: grid;
+    grid-template-areas: "h1Nosotros h1Nosotros"
+                         "p1Nosotros p1Nosotros"
+                         "p2Nosotros imgNosotros";
+    gap: 2rem;
+    line-height: 1.5rem;
+}
+
+.quienesSomos h1{
+    grid-area: h1Nosotros;
+}
+
+.quienesSomos .p1{
+    grid-area: p1Nosotros;
+    font-size: 20px;
+}
+
+.quienesSomos .p2{
+    grid-area: p2Nosotros;
+}
+
+.quienesSomos .img{
+    width: 100%;
+    grid-area: imgNosotros;
+}
+
+.listaServicios{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 80px 70px 80px;
+    text-align: center;
+    gap: 2rem;
+}
+
+.listaServicios img{
+    width: 50%;
+}
+
+.listaServicios h2{
+    font-size: 21px;
+    padding-bottom: 1rem;
+}
+
+/* Productos */
+
+.introPages{
+    padding: 50px 80px;
+    line-height: 1.5rem;
+}
+
+.introPages h1{
+    padding-bottom: 2rem;
+}
+
+.introPages p{
+    font-size: 20px;
+}
+
+.productos{
+    padding: 0px 80px 50px 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.productos img{
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.productos h2{
+    font-size: 21px;
+    padding-bottom: 10px;
+}
+
+.productos p{
+    font-size: 16px;
+    padding-bottom: 16px;
+}
+
+.productos article{
+    border-bottom: 2px solid #437cbf;
+}
+
+/* Contacto */
+
+.contacto{
+    padding: 0px 80px 50px 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+form, .contacto iframe{
+    width: 50%;
+}
+
+form label{
+    display: none;
+}
+
+
+
+/* Media Queries */
+
+
+@media screen and (max-width: 1024px) {
+    
+    .logo{
+        height: 50px;
+    }
+
+    .menu{
+        padding: 10px 60px;
+    }
+
+    .menuPages{
+        padding: 10px 60px;
+    }
+
+    .intro{
+        padding: 50px 60px;
+    }
+
+    .galeria{
+        padding: 50px 60px;
+    }
+
+    .contenido{
+        padding: 50px 60px;
+    }
+
+    .call{
+        padding: 20px 60px;
+    }
+
+    .quienesSomos{
+        padding: 50px 60px;
+        grid-template-areas: "h1Nosotros"
+                             "p1Nosotros"
+                             "imgNosotros"
+                             "p2Nosotros";
+        gap: 2rem;
+    }
+
+    .listaServicios{
+        padding: 0px 60px 70px 60px;
+        justify-content:space-around;
+    }
+
+    .listaServicios div{
+        width: 40%;
+    }
+
+    .listaServicios img{
+        width: 75%;
+    }
+
+    .introPages{
+        padding: 50px 60px;
+    }
+
+    .productos{
+        padding: 0px 60px 50px 60px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contacto{
+        padding: 0px 60px 50px 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .cita{
+        width: 80%;
+    }
+
+    .menu{
+        flex-direction: column;
+    }
+
+    .menuPages{
+        flex-direction: column;
+        position: unset;
+    }
+
+    header nav ul li{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    header{
+        position: unset;
+        z-index: 1;
+    }
+
+    header nav{
+        padding-top: 1rem;
+    }
+
+    .intro{
+        gap: 1rem;
+    }
+
+    .galeria{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .contenido{
+        grid-template-areas: "videoFDM"
+                             "textoDer"
+                             "videoDLP"
+                             "textoIzq" ;
+    }
+
+    .contenido iframe{
+        height: 300px;
+    }
+
+    .textoIzq{
+        text-align: left;
+    }
+
+    .listaServicios{
+        flex-wrap: wrap;
+        padding: 0px 30px 70px 30px;
+    }
+
+    .listaServicios div{
+        width: 45%;
+    }
+
+    .listaServicios img{
+        width: 50%;
+    }
+
+    .productos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto{
+        flex-direction: column;
+    }
+
+    form, .contacto iframe{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .menu{
+        padding: 10px 30px;
+    }
+
+    .menuPages{
+        padding: 10px 30px;
+    }
+
+    .menuPages nav ul li{
+        display: block;
+        text-align: center;
+    }
+
+    .intro{
+        grid-template-areas: "intro"
+                             "caja1"
+                             "caja2"
+                             "caja3";
+    }
+
+    .call{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .call p{
+        padding-bottom: 1rem;
+    }
+
+    .callBoton{
+        margin: 0px;
+    }
+
+    footer{
+        padding: 10px 30px;
+    }
+
+    footer nav ul li{
+        margin: 10px;
+    }
+
+    .listaServicios div{
+        width: 100%;
+    }
+
+    .listaServicios img{
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .menu{
+        padding: 10px 20px;
+    }
+
+    .menuPages{
+        padding: 10px 20px;
+    }
+    
+    header nav ul li{
+        display: block;
+        text-align: center;
+    }
+
+    .intro{
+        padding: 30px 30px;
+    
+    }
+
+    .galeria{
+        padding: 30px 30px;
+    }
+
+    .contenido{
+        padding: 30px 30px;
+    }
+
+    .call{
+        padding: 30px 30px;
+    }
+
+    footer nav ul li{
+        display: block;
+    }
+
+    footer p{
+        margin: 30px;
+    }
+
+    .quienesSomos{
+        padding: 30px 30px;
+    }
+
+    .quienesSomos h1{
+        line-height: 2rem;
+    }
+
+    .introPages{
+        padding: 30px 30px;
+    }
+
+    .productos, .contacto{
+        padding: 0px 30px 20px 30px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .galeria{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .listaServicios img{
+        width: 60%;
+    }
+
+    .productos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
