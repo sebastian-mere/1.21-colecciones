@@ -103,6 +103,18 @@ header nav ul li a:hover{
     transition: .5s ease;
 }
 
+.linkMenu{
+    font-size: 21px;
+    font-weight:500;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.linkMenu:hover{
+    color: #437cbf;
+    transition: .5s ease;
+}
+
 .activo{
     color: #437cbf;
 }
@@ -608,10 +620,6 @@ form label{
         width: 80%;
     }
 
-    .menu{
-        flex-direction: column;
-    }
-
     .menuPages{
         flex-direction: column;
         position: unset;
@@ -629,6 +637,10 @@ form label{
 
     header nav{
         padding-top: 1rem;
+    }
+
+    .linkMenu{
+        margin-left: 0px;
     }
 
     .intro{
