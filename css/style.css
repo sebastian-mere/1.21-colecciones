@@ -453,6 +453,13 @@ footer p{
     border-bottom: 2px solid #437cbf;
 }
 
+/* Servicios */
+
+.imgServicios{
+    width: 40%;
+    height:min-content;
+}
+
 /* Contacto */
 
 .contacto{
@@ -548,7 +555,7 @@ form label{
 /* Media Queries */
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
     
     .logo{
         height: 50px;
