@@ -17,6 +17,7 @@ html{
 
 h1, h2, h3, h4, h5{
     font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
 }
 
 h1{
@@ -85,22 +86,6 @@ header{
     align-items: center;
     background-color: black;
     padding: 10px 80px;
-}
-
-header nav ul li{
-    font-size: 21px;
-    font-weight:500;
-    margin-left: 20px;
-    display: inline-block;
-}
-
-header nav ul li a{
-    color: #fff;
-}
-
-header nav ul li a:hover{
-    color: #437cbf;
-    transition: .5s ease;
 }
 
 .linkMenu{
@@ -345,16 +330,6 @@ footer p{
 
 /* Nosotros */
 
-.menuPages{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    padding: 10px 80px;
-    position: sticky;
-    top: 0;
-}
-
 .contenedorBanner{
     height: 40vh;
     overflow: hidden;
@@ -386,11 +361,7 @@ footer p{
 
 .quienesSomos .p2{
     grid-area: p2Nosotros;
-}
-
-.quienesSomos .img{
-    width: 100%;
-    grid-area: imgNosotros;
+    margin-bottom: 0;
 }
 
 .listaServicios{
@@ -403,8 +374,13 @@ footer p{
     gap: 2rem;
 }
 
-.listaServicios img{
-    width: 50%;
+.imagenNosotros{
+    background-image: url(../img/fdm.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 30vh;
+    width: 40vw;
+    grid-area: imgNosotros;
 }
 
 .listaServicios h2{
@@ -455,9 +431,19 @@ footer p{
 
 /* Servicios */
 
-.imgServicios{
-    width: 40%;
-    height:min-content;
+.servicios{
+    padding: 0px 80px 50px 80px;
+}
+
+.servicios h2{
+    font-size: 24px;
+}
+
+.linea {
+    border-bottom: 2px solid #437cbf;
+    height: 2px;
+    padding: 0;
+    margin: 20px 0 20px 0;
 }
 
 /* Contacto */
@@ -471,10 +457,6 @@ footer p{
 
 form, .contacto iframe{
     width: 50%;
-}
-
-form label{
-    display: none;
 }
 
 /* Animaciones */
@@ -565,10 +547,6 @@ form label{
         padding: 10px 60px;
     }
 
-    .menuPages{
-        padding: 10px 60px;
-    }
-
     .intro{
         padding: 50px 60px;
     }
@@ -592,6 +570,10 @@ form label{
                              "imgNosotros"
                              "p2Nosotros";
         gap: 2rem;
+    }
+    
+    .imagenNosotros{
+        width: 100%;
     }
 
     .listaServicios{
@@ -625,16 +607,6 @@ form label{
 
     .cita{
         width: 80%;
-    }
-
-    .menuPages{
-        flex-direction: column;
-        position: unset;
-    }
-
-    header nav ul li{
-        margin-right: 10px;
-        margin-left: 10px;
     }
 
     header{
@@ -706,15 +678,6 @@ form label{
         padding: 10px 30px;
     }
 
-    .menuPages{
-        padding: 10px 30px;
-    }
-
-    .menuPages nav ul li{
-        display: block;
-        text-align: center;
-    }
-
     .intro{
         grid-template-areas: "intro"
                              "caja1"
@@ -757,15 +720,6 @@ form label{
 
     .menu{
         padding: 10px 20px;
-    }
-
-    .menuPages{
-        padding: 10px 20px;
-    }
-    
-    header nav ul li{
-        display: block;
-        text-align: center;
     }
 
     .intro{
