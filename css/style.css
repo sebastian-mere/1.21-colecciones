@@ -337,7 +337,7 @@ footer p{
 
 .bannerPages{
     object-fit: cover;
-    width: 100%;
+    min-width: 100%;
 }
 
 .quienesSomos{
@@ -386,6 +386,14 @@ footer p{
 .listaServicios h2{
     font-size: 21px;
     padding-bottom: 1rem;
+}
+
+.listaServicios img{
+    width: 75%;
+}
+
+.listaServicios a{
+    color: #000;
 }
 
 /* Productos */
@@ -443,7 +451,37 @@ footer p{
     border-bottom: 2px solid #437cbf;
     height: 2px;
     padding: 0;
-    margin: 20px 0 20px 0;
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.imagenServicio1{
+    background-image: url(../img/figura.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    min-height: 40vh;
+}
+
+.imagenServicio2{
+    background-image: url(../img/drone.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 40vh;
+}
+
+.imagenServicio3{
+    background-image: url(../img/figura.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    min-height: 40vh;
+}
+
+.imagenServicio5{
+    background-image: url(../img/escultura.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 40vh;
 }
 
 /* Contacto */
@@ -536,7 +574,6 @@ form, .contacto iframe{
 
 /* Media Queries */
 
-
 @media screen and (max-width: 992px) {
     
     .logo{
@@ -585,10 +622,6 @@ form, .contacto iframe{
         width: 40%;
     }
 
-    .listaServicios img{
-        width: 75%;
-    }
-
     .introPages{
         padding: 50px 60px;
     }
@@ -598,7 +631,7 @@ form, .contacto iframe{
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .contacto{
+    .servicios, .contacto{
         padding: 0px 60px 50px 60px;
     }
 }
@@ -661,6 +694,10 @@ form, .contacto iframe{
 
     .productos{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .servicios p{
+        margin: 0;
     }
 
     .contacto{
@@ -759,7 +796,7 @@ form, .contacto iframe{
         padding: 30px 30px;
     }
 
-    .productos, .contacto{
+    .productos, .contacto, .servicios{
         padding: 0px 30px 20px 30px;
     }
 
