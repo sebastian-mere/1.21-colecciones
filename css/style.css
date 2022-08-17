@@ -88,6 +88,11 @@ header{
     padding: 10px 80px;
 }
 
+.stick{
+    position: sticky;
+    top: 0;
+}
+
 .linkMenu{
     font-size: 21px;
     font-weight:500;
@@ -653,6 +658,10 @@ form, .contacto iframe{
 
     .linkMenu{
         margin-left: 0px;
+    }
+
+    .stick{
+        position: unset;
     }
 
     .intro{
