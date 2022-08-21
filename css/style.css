@@ -24,6 +24,10 @@ h1{
     font-size: 35px;
 }
 
+p{
+    font-weight: 600;
+}
+
 a{
     font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none;
