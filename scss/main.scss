@@ -260,44 +260,45 @@ main{
             }
         }
     }
-    .call{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $color-principal;
-        padding: 20px;
-        font-size: 21px;
-        @media screen and (max-width: 992px) {
-            padding: 20px 60px;
-        }
+}
+
+.call{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-principal;
+    padding: 20px;
+    font-size: 21px;
+    @media screen and (max-width: 992px) {
+        padding: 20px 60px;
+    }
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        text-align: center;
+    }
+    @media screen and (max-width: 480px) {
+        padding: 30px 30px;
+    }
+    p{
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
         @media screen and (max-width: 600px) {
-            flex-direction: column;
-            text-align: center;
+            padding-bottom: 1rem;
         }
-        @media screen and (max-width: 480px) {
-            padding: 30px 30px;
+    }
+    .callBoton{
+        display: inline-block;
+        background-color: $texto-claro;
+        border-radius: 5px;
+        margin-left: 25px;
+        padding: 10px 30px;
+        @media screen and (max-width: 600px) {
+            margin: 0px;
         }
-        p{
-            font-family: 'Roboto Condensed', sans-serif;
+        a{
             font-weight: bold;
-            @media screen and (max-width: 600px) {
-                padding-bottom: 1rem;
-            }
-        }
-        .callBoton{
-            display: inline-block;
-            background-color: $texto-claro;
-            border-radius: 5px;
-            margin-left: 25px;
-            padding: 10px 30px;
-            @media screen and (max-width: 600px) {
-                margin: 0px;
-            }
-            a{
-                font-weight: bold;
-                text-decoration: none;
-                color: $color-principal;
-            }
+            text-decoration: none;
+            color: $color-principal;
         }
     }
 }

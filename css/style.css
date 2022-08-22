@@ -227,7 +227,7 @@ main .contenido {
       main .contenido .textoIzq {
         text-align: left; } }
 
-main .call {
+.call {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,31 +235,31 @@ main .call {
   padding: 20px;
   font-size: 21px; }
   @media screen and (max-width: 992px) {
-    main .call {
+    .call {
       padding: 20px 60px; } }
   @media screen and (max-width: 600px) {
-    main .call {
+    .call {
       flex-direction: column;
       text-align: center; } }
   @media screen and (max-width: 480px) {
-    main .call {
+    .call {
       padding: 30px 30px; } }
-  main .call p {
+  .call p {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold; }
     @media screen and (max-width: 600px) {
-      main .call p {
+      .call p {
         padding-bottom: 1rem; } }
-  main .call .callBoton {
+  .call .callBoton {
     display: inline-block;
     background-color: #fff;
     border-radius: 5px;
     margin-left: 25px;
     padding: 10px 30px; }
     @media screen and (max-width: 600px) {
-      main .call .callBoton {
+      .call .callBoton {
         margin: 0px; } }
-    main .call .callBoton a {
+    .call .callBoton a {
       font-weight: bold;
       text-decoration: none;
       color: #437cbf; }
