@@ -92,9 +92,9 @@ header {
       @media screen and (max-width: 768px) {
         header .menu nav div div .linkMenu {
           margin-left: 0px; } }
-    header .menu nav div div .linkMenu:hover {
-      color: #437cbf;
-      transition: .5s ease; }
+      header .menu nav div div .linkMenu:hover {
+        color: #437cbf;
+        transition: .5s ease; }
 
 /* Estilos contenido principal */
 main .intro {
@@ -185,10 +185,10 @@ main .galeria {
         font-size: 20px;
         font-weight: bolder;
         text-align: center; }
-  main .galeria .itemGaleria:hover img {
-    filter: blur(3px); }
-  main .galeria .itemGaleria:hover .overlay {
-    opacity: 1; }
+    main .galeria .itemGaleria:hover img {
+      filter: blur(3px); }
+    main .galeria .itemGaleria:hover .overlay {
+      opacity: 1; }
 
 main .contenido {
   padding: 50px 80px;

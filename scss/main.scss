@@ -86,11 +86,12 @@ header{
                         @media screen and (max-width: 768px) {
                             margin-left: 0px;
                         }
+                        &:hover{
+                            color: $color-principal;
+                            transition: .5s ease;
+                        }
                     }
-                    .linkMenu:hover{
-                        color: $color-principal;
-                        transition: .5s ease;
-                    }
+                    
                 }
             }
         }
@@ -204,13 +205,13 @@ main{
                     text-align: center;
                 }
             }
-        }
-        .itemGaleria:hover{
-            img{
-                filter: blur(3px);
-            }
-            .overlay{
-                opacity: 1;
+            &:hover{
+                img{
+                    filter: blur(3px);
+                }
+                .overlay{
+                    opacity: 1;
+                }
             }
         }
     }
