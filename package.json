@@ -1,7 +1,7 @@
 {
   "name": "proyecto-final",
   "version": "1.0.0",
-  "description": "",
+  "description": "121gw Colecciones",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/sebastian-mere/1.21-colecciones.git"
   },
-  "author": "",
+  "author": "Sebastian Mere",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sebastian-mere/1.21-colecciones/issues"

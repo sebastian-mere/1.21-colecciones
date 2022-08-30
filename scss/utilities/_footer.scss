@@ -1,0 +1,44 @@
+footer{
+    background-color: map-get($map: $color, $key: bg-footer);
+    text-align: center;
+    padding: 10px 50px;
+    @include breakpoint(sm) {
+            padding: 10px 30px;
+    }
+    .social{
+        margin: 30px;
+        a{
+            padding: 0 10px;
+        }
+    }
+    nav{
+        ul{
+            li{
+                font-size: 20px;
+                font-weight:300;
+                margin: 20px;
+                display: inline-block;
+                @include breakpoint(sm) {
+                    margin: 10px;
+                }
+                @include breakpoint(xs) {
+                    display: block;
+                }
+                         
+                a{
+                    color: map-get($map: $color, $key: texto-claro);
+                }
+            }
+        }
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: map-get($map: $color, $key: texto-claro);
+        margin: 10px;
+        @include breakpoint(xs) {
+            margin: 30px;
+        
+        }
+    }
+}

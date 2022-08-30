@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@
   * html {
     scroll-behavior: smooth; }
 
-/* Estilo textos */
 * {
   font-family: 'Roboto', sans-serif; }
   * h1, * h2, * h3, * h4, * h5 {
@@ -24,7 +22,15 @@
     font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none; }
 
-/* Estilos Header */
+header .banner {
+  background-size: cover;
+  background-position: center center; }
+
+header .banner, header .menu, header.menu, .call, main .galeria .itemGaleria .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 header {
   position: sticky;
   top: -100vh;
@@ -35,12 +41,7 @@ header {
       z-index: 1; } }
   header .banner {
     background-image: url("../img/header.png");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    height: 100vh; }
     header .banner .cita {
       flex-direction: column; }
       @media screen and (max-width: 768px) {
@@ -65,9 +66,7 @@ header {
       top: 90vh;
       font-size: 2.5rem; }
   header .menu {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: #000;
     padding: 10px 80px; }
     @media screen and (max-width: 992px) {
@@ -95,6 +94,112 @@ header {
       header .menu nav div div .linkMenu:hover {
         color: #437cbf;
         transition: .5s ease; }
+
+header.menu {
+  justify-content: space-between;
+  background-color: #000;
+  padding: 10px 80px;
+  position: sticky;
+  top: 0; }
+  @media screen and (max-width: 992px) {
+    header.menu {
+      padding: 10px 60px; } }
+  @media screen and (max-width: 600px) {
+    header.menu {
+      padding: 10px 30px; } }
+  header.menu div .logo {
+    height: 60px; }
+    @media screen and (max-width: 992px) {
+      header.menu div .logo {
+        height: 50px; } }
+  @media screen and (max-width: 768px) {
+    header.menu nav {
+      padding-top: 1rem; } }
+  header.menu nav div div .linkMenu {
+    font-size: 21px;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 10px; }
+    @media screen and (max-width: 768px) {
+      header.menu nav div div .linkMenu {
+        margin-left: 0px; } }
+    header.menu nav div div .linkMenu:hover {
+      color: #437cbf;
+      transition: .5s ease; }
+
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 10px 50px; }
+  @media screen and (max-width: 600px) {
+    footer {
+      padding: 10px 30px; } }
+  footer .social {
+    margin: 30px; }
+    footer .social a {
+      padding: 0 10px; }
+  footer nav ul li {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px;
+    display: inline-block; }
+    @media screen and (max-width: 600px) {
+      footer nav ul li {
+        margin: 10px; } }
+    @media screen and (max-width: 480px) {
+      footer nav ul li {
+        display: block; } }
+    footer nav ul li a {
+      color: #fff; }
+  footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    margin: 10px; }
+    @media screen and (max-width: 480px) {
+      footer p {
+        margin: 30px; } }
+
+/* CTA */
+.call {
+  background-color: #437cbf;
+  padding: 20px;
+  font-size: 21px; }
+  @media screen and (max-width: 992px) {
+    .call {
+      padding: 20px 60px; } }
+  @media screen and (max-width: 600px) {
+    .call {
+      flex-direction: column;
+      text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .call {
+      padding: 30px 30px; } }
+  .call p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold; }
+    @media screen and (max-width: 600px) {
+      .call p {
+        padding-bottom: 1rem; } }
+  .call .callBoton {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-left: 25px;
+    padding: 10px 30px; }
+    @media screen and (max-width: 600px) {
+      .call .callBoton {
+        margin: 0px; } }
+    .call .callBoton a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #437cbf; }
+
+/* Botón Whatsapp*/
+.whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px; }
 
 /* Estilos contenido principal */
 main .intro {
@@ -175,10 +280,7 @@ main .galeria {
       right: 0;
       opacity: 0;
       transition: .5s ease;
-      background-color: #437cbfb2;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+      background-color: #437cbfb2; }
       main .galeria .itemGaleria .overlay p {
         font-family: 'Roboto Condensed', sans-serif;
         color: #fff;
@@ -226,80 +328,3 @@ main .contenido {
     @media screen and (max-width: 768px) {
       main .contenido .textoIzq {
         text-align: left; } }
-
-.call {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #437cbf;
-  padding: 20px;
-  font-size: 21px; }
-  @media screen and (max-width: 992px) {
-    .call {
-      padding: 20px 60px; } }
-  @media screen and (max-width: 600px) {
-    .call {
-      flex-direction: column;
-      text-align: center; } }
-  @media screen and (max-width: 480px) {
-    .call {
-      padding: 30px 30px; } }
-  .call p {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold; }
-    @media screen and (max-width: 600px) {
-      .call p {
-        padding-bottom: 1rem; } }
-  .call .callBoton {
-    display: inline-block;
-    background-color: #fff;
-    border-radius: 5px;
-    margin-left: 25px;
-    padding: 10px 30px; }
-    @media screen and (max-width: 600px) {
-      .call .callBoton {
-        margin: 0px; } }
-    .call .callBoton a {
-      font-weight: bold;
-      text-decoration: none;
-      color: #437cbf; }
-
-/* Estilos Footer */
-footer {
-  background-color: #000;
-  text-align: center;
-  padding: 10px 50px; }
-  @media screen and (max-width: 600px) {
-    footer {
-      padding: 10px 30px; } }
-  footer .social {
-    margin: 30px; }
-    footer .social a {
-      padding: 0 10px; }
-  footer nav ul li {
-    font-size: 20px;
-    font-weight: 300;
-    margin: 20px;
-    display: inline-block; }
-    @media screen and (max-width: 600px) {
-      footer nav ul li {
-        margin: 10px; } }
-    @media screen and (max-width: 480px) {
-      footer nav ul li {
-        display: block; } }
-    footer nav ul li a {
-      color: #fff; }
-  footer p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #fff;
-    margin: 10px; }
-    @media screen and (max-width: 480px) {
-      footer p {
-        margin: 30px; } }
-
-/* Botón Whatsapp*/
-.whatsapp {
-  position: fixed;
-  bottom: 30px;
-  right: 30px; }
