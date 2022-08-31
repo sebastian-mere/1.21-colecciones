@@ -1,0 +1,161 @@
+main{
+    .intro{
+        line-height: 1.5rem;
+        padding: 50px 80px;
+        display: grid;
+        grid-template-areas: "intro intro intro"
+                             "caja1 caja2 caja3";
+        gap: 2rem;
+        @include breakpoint(lg) {
+            padding: 50px 60px;
+        }
+        @include breakpoint(md) {
+            gap: 1rem;
+        }
+        @include breakpoint(sm) {
+            grid-template-areas: "intro"
+                                 "caja1"
+                                 "caja2"
+                                 "caja3";
+        }
+        @include breakpoint(xs) {
+            padding: 30px 30px;
+        }
+        h1{
+            padding-bottom: 30px;
+        }
+        p{
+            font-size: 20px;
+        }
+        .introTexto{
+            grid-area: intro;
+        }
+        .introCaja{
+            border-bottom: 2px solid map-get($map: $color, $key: principal);
+            .caja1{
+                grid-area: caja1;
+            }
+            .caja2{
+                grid-area: caja2;
+            }
+            .caja3{
+                grid-area: caja3;
+            }
+            img{
+                display: block;
+                margin: auto;
+                width: 100px;
+            }
+            h3{
+                font-size: 20px;
+                padding-bottom: 10px;
+            }
+            p{
+                font-size: 16px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        background-color: map-get($map: $color, $key: bg-galeria);
+        padding: 50px 80px;
+        gap: 2rem;
+        @include breakpoint(lg) {
+            padding: 50px 60px;
+        }
+        @include breakpoint(md) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        @include breakpoint(xs) {
+            padding: 30px 30px;
+        }
+        @include breakpoint(xxs) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .itemGaleria{
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+            img{
+                display: block;
+                width: 100%;
+            }
+            .overlay{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: map-get($map: $color, $key: principal-overlay);
+                @extend %flex;
+                p{
+                    font-family: 'Roboto Condensed', sans-serif;
+                    color: map-get($map: $color, $key: texto-claro);
+                    font-size: 20px;
+                    font-weight: bolder;
+                    text-align: center;
+                }
+            }
+            &:hover{
+                img{
+                    filter: blur(3px);
+                }
+                .overlay{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .contenido{
+        padding: 50px 80px;
+        line-height: 1.5rem;
+        display: grid;
+        grid-template-areas: "videoFDM textoDer"
+                             "textoIzq videoDLP";
+        gap: 2rem;
+        align-items: center;
+        overflow: hidden;
+        @include breakpoint(lg) {
+            padding: 50px 60px;
+        }
+        @include breakpoint(md) {
+            grid-template-areas: "videoFDM"
+                                 "textoDer"
+                                 "videoDLP"
+                                 "textoIzq" ;
+        }
+        @include breakpoint(xs) {
+            padding: 30px 30px;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+            @include breakpoint(md) {
+                height: 300px;
+            }
+        }
+        .videoFDM{
+            grid-area: videoFDM;
+        }
+        .videoDLP{
+            grid-area: videoDLP;
+        }
+        .textoDer{
+            text-align: left;
+            grid-area: textoDer;
+        }
+        .textoIzq{
+            text-align: right;
+            grid-area: textoIzq;
+            @include breakpoint(md) {
+                text-align: left;
+            }
+        }
+    }
+}
