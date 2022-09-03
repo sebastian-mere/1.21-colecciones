@@ -13,6 +13,9 @@
 // Extend
 @import "layout/extend";
 
+// Animaciones
+@import "utilities/animaciones";
+
 // Estilos Header
 @import "layout/header";
 @import "layout/header-pages";
@@ -25,3 +28,7 @@
 
 // Estilos páginas
 @import "pages/home";
+@import "pages/nosotros";
+@import "pages/productos";
+@import "pages/servicios";
+@import "pages/contacto";

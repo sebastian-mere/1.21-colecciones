@@ -1,4 +1,36 @@
-/* CTA */
+// Intro Páginas
+
+main{
+    .contenedorBanner{
+        height: 25vh;
+        overflow: hidden;
+        .bannerPages{
+            object-fit: cover;
+            min-width: 100%;
+        }
+    }
+    .introPages{
+        padding: 50px 80px;
+        line-height: 1.5rem;
+        @include breakpoint(lg) {
+            padding: 50px 60px;
+        }
+        @include breakpoint(xs) {
+            padding: 30px 30px;
+        }
+        h1{
+            padding-bottom: 2rem;
+            @include breakpoint(xs) {
+                padding-bottom: 0.5rem;
+            }
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+}
+
+// CTA
 
 .call{
     @extend %flex;
@@ -39,7 +71,7 @@
     }
 }
 
-/* Botón Whatsapp*/
+// Botón Whatsapp
 .whatsapp{
     position: fixed;
     bottom: 30px;

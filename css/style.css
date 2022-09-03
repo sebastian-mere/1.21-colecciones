@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -22,14 +21,88 @@
     font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none; }
 
-header .banner {
+header .banner, main .quienesSomos .imagenNosotros, main .servicios div article div .imagenServicio1, main .servicios div article div .imagenServicio2, main .servicios div article div .imagenServicio3, main .servicios div article div .imagenServicio4, main .servicios div article div .imagenServicio5 {
   background-size: cover;
   background-position: center center; }
 
-header .banner, header .menu, header.menu, .call, main .galeria .itemGaleria .overlay {
+header .banner, header .menu, header.menu, .call, main .galeria .itemGaleria .overlay, main .listaServicios {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.kenburns-top {
+  animation: kenburns-top 5s ease-out both; }
+
+@keyframes kenburns-top {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%; }
+  100% {
+    transform: scale(1.25) translateY(-15px);
+    transform-origin: top; } }
+
+.kenburns-right {
+  animation: kenburns-right 5s ease-out both; }
+
+@keyframes kenburns-right {
+  0% {
+    transform: scale(1) translate(0, 0);
+    transform-origin: 84% 50%; }
+  100% {
+    transform: scale(1.25) translateX(20px);
+    transform-origin: right; } }
+
+.kenburns-bottom {
+  animation: kenburns-bottom 5s ease-out both; }
+
+@keyframes kenburns-bottom {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 84%; }
+  100% {
+    transform: scale(1.25) translateY(15px);
+    transform-origin: bottom; } }
+
+.kenburns-left {
+  animation: kenburns-left 5s ease-out both; }
+
+@keyframes kenburns-left {
+  0% {
+    transform: scale(1) translate(0, 0);
+    transform-origin: 16% 50%; }
+  100% {
+    transform: scale(1.25) translate(-20px, 15px);
+    transform-origin: left; } }
+
+.text-shadow-drop-bottom {
+  animation: text-shadow-drop-bottom 0.6s both; }
+
+@keyframes text-shadow-drop-bottom {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+  100% {
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.5); } }
+
+.shake-vertical {
+  animation: shake-vertical 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3s both; }
+
+@keyframes shake-vertical {
+  0%,
+  100% {
+    transform: translateY(0); }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-3px); }
+  20%,
+  40%,
+  60% {
+    transform: translateY(3px); }
+  80% {
+    transform: translateY(2px); }
+  90% {
+    transform: translateY(-2px); } }
 
 header {
   position: sticky;
@@ -80,9 +153,6 @@ header {
       @media screen and (max-width: 992px) {
         header .menu div .logo {
           height: 50px; } }
-    @media screen and (max-width: 768px) {
-      header .menu nav {
-        padding-top: 1rem; } }
     header .menu nav div div .linkMenu {
       font-size: 21px;
       font-weight: 500;
@@ -104,6 +174,9 @@ header.menu {
   @media screen and (max-width: 992px) {
     header.menu {
       padding: 10px 60px; } }
+  @media screen and (max-width: 768px) {
+    header.menu {
+      position: unset; } }
   @media screen and (max-width: 600px) {
     header.menu {
       padding: 10px 30px; } }
@@ -112,9 +185,6 @@ header.menu {
     @media screen and (max-width: 992px) {
       header.menu div .logo {
         height: 50px; } }
-  @media screen and (max-width: 768px) {
-    header.menu nav {
-      padding-top: 1rem; } }
   header.menu nav div div .linkMenu {
     font-size: 21px;
     font-weight: 500;
@@ -160,7 +230,30 @@ footer {
       footer p {
         margin: 30px; } }
 
-/* CTA */
+main .contenedorBanner {
+  height: 25vh;
+  overflow: hidden; }
+  main .contenedorBanner .bannerPages {
+    object-fit: cover;
+    min-width: 100%; }
+
+main .introPages {
+  padding: 50px 80px;
+  line-height: 1.5rem; }
+  @media screen and (max-width: 992px) {
+    main .introPages {
+      padding: 50px 60px; } }
+  @media screen and (max-width: 480px) {
+    main .introPages {
+      padding: 30px 30px; } }
+  main .introPages h1 {
+    padding-bottom: 2rem; }
+    @media screen and (max-width: 480px) {
+      main .introPages h1 {
+        padding-bottom: 0.5rem; } }
+  main .introPages p {
+    font-size: 20px; }
+
 .call {
   background-color: #437cbf;
   padding: 20px;
@@ -195,7 +288,6 @@ footer {
       text-decoration: none;
       color: #437cbf; }
 
-/* Botón Whatsapp*/
 .whatsapp {
   position: fixed;
   bottom: 30px;
@@ -260,9 +352,7 @@ main .galeria {
       gap: 1rem; } }
   @media screen and (max-width: 480px) {
     main .galeria {
-      padding: 30px 30px; } }
-  @media screen and (max-width: 320px) {
-    main .galeria {
+      padding: 30px 30px;
       grid-template-columns: repeat(1, 1fr); } }
   main .galeria .itemGaleria {
     position: relative;
@@ -327,3 +417,176 @@ main .contenido {
     @media screen and (max-width: 768px) {
       main .contenido .textoIzq {
         text-align: left; } }
+
+main .quienesSomos {
+  padding: 0px 80px;
+  display: grid;
+  grid-template-areas: "p2Nosotros imgNosotros";
+  gap: 2rem;
+  line-height: 1.5rem; }
+  @media screen and (max-width: 992px) {
+    main .quienesSomos {
+      padding: 0px 60px;
+      grid-template-areas: "imgNosotros" "p2Nosotros"; } }
+  @media screen and (max-width: 480px) {
+    main .quienesSomos {
+      padding: 0px 30px; } }
+  main .quienesSomos .p2 {
+    grid-area: p2Nosotros;
+    margin-bottom: 0; }
+  main .quienesSomos .imagenNosotros {
+    background-image: url(../img/fdm.jpg);
+    min-height: 30vh;
+    width: 40vw;
+    grid-area: imgNosotros; }
+    @media screen and (max-width: 992px) {
+      main .quienesSomos .imagenNosotros {
+        width: 100%; } }
+
+main .listaServicios {
+  flex-wrap: nowrap;
+  padding: 20px 80px 70px 80px;
+  text-align: center;
+  gap: 2rem; }
+  @media screen and (max-width: 992px) {
+    main .listaServicios {
+      padding: 0px 60px 70px 60px;
+      justify-content: space-around; } }
+  @media screen and (max-width: 768px) {
+    main .listaServicios {
+      padding: 0px 30px 70px 30px;
+      flex-wrap: wrap; } }
+  main .listaServicios h2 {
+    font-size: 21px;
+    padding-bottom: 1rem; }
+  main .listaServicios img {
+    width: 75%; }
+    @media screen and (max-width: 768px) {
+      main .listaServicios img {
+        width: 50%; } }
+    @media screen and (max-width: 600px) {
+      main .listaServicios img {
+        width: 25%; } }
+    @media screen and (max-width: 320px) {
+      main .listaServicios img {
+        width: 60%; } }
+  main .listaServicios a {
+    color: #000; }
+  @media screen and (max-width: 992px) {
+    main .listaServicios div {
+      width: 40%; } }
+  @media screen and (max-width: 768px) {
+    main .listaServicios div {
+      width: 45%; } }
+  @media screen and (max-width: 600px) {
+    main .listaServicios div {
+      width: 100%; } }
+
+main .productos {
+  padding: 0px 80px 50px 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; }
+  @media screen and (max-width: 992px) {
+    main .productos {
+      padding: 0px 60px 50px 60px;
+      grid-template-columns: repeat(3, 1fr); } }
+  @media screen and (max-width: 768px) {
+    main .productos {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media screen and (max-width: 480px) {
+    main .productos {
+      padding: 0px 30px 20px 30px; } }
+  @media screen and (max-width: 320px) {
+    main .productos {
+      grid-template-columns: repeat(1, 1fr); } }
+  main .productos article {
+    border-bottom: 2px solid #437cbf; }
+    main .productos article img {
+      width: 100%;
+      padding-bottom: 10px; }
+    main .productos article h2 {
+      font-size: 21px;
+      padding-bottom: 10px; }
+    main .productos article p {
+      font-size: 16px;
+      padding-bottom: 16px; }
+
+main .servicios {
+  padding: 0px 80px 50px 80px; }
+  @media screen and (max-width: 992px) {
+    main .servicios {
+      padding: 0px 60px 50px 60px; } }
+  @media screen and (max-width: 480px) {
+    main .servicios {
+      padding: 0px 30px 20px 30px; } }
+  main .servicios div article div .imagenServicio1 {
+    background-image: url(../img/figura.jpg);
+    height: 100%;
+    min-height: 40vh; }
+  main .servicios div article div .imagenServicio2 {
+    background-image: url(../img/drone.jpg);
+    min-height: 40vh; }
+  main .servicios div article div .imagenServicio3 {
+    background-image: url(../img/figura.jpg);
+    height: 100%;
+    min-height: 40vh; }
+  main .servicios div article div .imagenServicio4 {
+    background-image: url(../img/drone.jpg);
+    min-height: 40vh; }
+  main .servicios div article div .imagenServicio5 {
+    background-image: url(../img/escultura.jpg);
+    min-height: 40vh; }
+  main .servicios div article div h2 {
+    font-size: 24px; }
+  main .servicios div .linea {
+    border-bottom: 2px solid #437cbf;
+    height: 2px;
+    padding: 0;
+    margin: 2.5rem 0 2.5rem 0; }
+
+main .contacto {
+  padding: 0px 80px 50px 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; }
+  @media screen and (max-width: 992px) {
+    main .contacto {
+      padding: 0px 60px 50px 60px; } }
+  @media screen and (max-width: 768px) {
+    main .contacto {
+      flex-direction: column; } }
+  @media screen and (max-width: 480px) {
+    main .contacto {
+      padding: 0px 30px 20px 30px; } }
+  main .contacto form {
+    width: 50%; }
+    @media screen and (max-width: 768px) {
+      main .contacto form {
+        width: auto; } }
+    main .contacto form div {
+      gap: 1rem; }
+      main .contacto form div .foco:focus {
+        outline: 0;
+        border: 2px solid #437cbf;
+        border-color: #437cbf;
+        box-shadow: none; }
+      main .contacto form div .botonBorrar {
+        width: 50%;
+        background-color: #fff;
+        border: 2px solid #437cbf;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 600;
+        color: #437cbf; }
+      main .contacto form div .botonEnviar {
+        width: 50%;
+        background-color: #437cbf;
+        border: 2px solid #437cbf;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 600;
+        color: #fff; }
+  main .contacto iframe {
+    width: 50%; }
+    @media screen and (max-width: 768px) {
+      main .contacto iframe {
+        width: 100%; } }

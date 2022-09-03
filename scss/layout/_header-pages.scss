@@ -8,6 +8,9 @@ header.menu{
     @include breakpoint(lg) {
         padding: 10px 60px;
     }
+    @include breakpoint(md) {
+        position: unset;
+    }
     @include breakpoint(sm) {
         padding: 10px 30px;
     }
@@ -20,9 +23,6 @@ header.menu{
         }
     }
     nav{
-        @include breakpoint(md) {
-            padding-top: 1rem;
-        }
         div{
             div{
                 .linkMenu{

@@ -1,0 +1,55 @@
+main{
+    .contacto{
+        padding: 0px 80px 50px 80px;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        @include breakpoint(lg) {
+            padding: 0px 60px 50px 60px;
+        }
+        @include breakpoint(md) {
+            flex-direction: column;
+        }
+        @include breakpoint(xs) {
+            padding: 0px 30px 20px 30px;
+        }
+        form{
+            width: 50%;
+            @include breakpoint(md) {
+                width: auto;
+            }
+            div{
+                .foco:focus{
+                    outline: 0;
+                    border: 2px solid map-get($map: $color, $key: principal);
+                    border-color: map-get($map: $color, $key: principal);
+                    box-shadow: none;
+                }
+                gap: 1rem;
+                .botonBorrar{
+                    width: 50%;
+                    background-color: map-get($map: $color, $key: bg-claro);
+                    border: 2px solid map-get($map: $color, $key: principal);
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-weight: 600;
+                    color: map-get($map: $color, $key: principal);
+                }
+                .botonEnviar{
+                    width: 50%;
+                    background-color: map-get($map: $color, $key: principal);
+                    border: 2px solid map-get($map: $color, $key: principal);
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-weight: 600;
+                    color: map-get($map: $color, $key: texto-claro);
+                }
+            }
+        }
+        iframe{
+            width: 50%;
+            @include breakpoint(md) {
+                width: 100%;
+            }
+        }
+    }
+    
+}

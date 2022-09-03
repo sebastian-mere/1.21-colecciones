@@ -1,0 +1,76 @@
+main{
+    .quienesSomos{
+        padding: 0px 80px;
+        display: grid;
+        grid-template-areas: "p2Nosotros imgNosotros";
+        gap: 2rem;
+        line-height: 1.5rem;
+        @include breakpoint(lg) {
+            padding: 0px 60px;
+            grid-template-areas: "imgNosotros"
+                                 "p2Nosotros";
+        }
+        @include breakpoint(xs) {
+            padding: 0px 30px;
+        }
+        .p2{
+            grid-area: p2Nosotros;
+            margin-bottom: 0;
+        }
+        .imagenNosotros{
+            background-image: url(../img/fdm.jpg);
+            @extend %bg-cover;
+            min-height: 30vh;
+            width: 40vw;
+            grid-area: imgNosotros;
+            @include breakpoint(lg) {
+                width: 100%;
+            }
+        }
+    }
+    .listaServicios{
+        @extend %flex;
+        flex-wrap: nowrap;
+        padding: 20px 80px 70px 80px;
+        text-align: center;
+        gap: 2rem;
+        @include breakpoint(lg) {
+            padding: 0px 60px 70px 60px;
+            justify-content:space-around;
+        }
+        @include breakpoint(md) {
+            padding: 0px 30px 70px 30px;
+            flex-wrap: wrap;
+        }
+        h2{
+            font-size: 21px;
+            padding-bottom: 1rem;
+        }
+        img{
+            width: 75%;
+            @include breakpoint(md) {
+                width: 50%;
+            }
+            @include breakpoint(sm) {
+                width: 25%;
+            }
+            @include breakpoint(xxs) {
+                width: 60%;
+            }
+        }
+        a{
+            color: #000;
+        }
+        div{
+            @include breakpoint(lg) {
+                width: 40%;
+            }
+            @include breakpoint(md) {
+                width: 45%;
+            }
+            @include breakpoint(sm) {
+                width: 100%;
+            }
+        }
+    }
+}

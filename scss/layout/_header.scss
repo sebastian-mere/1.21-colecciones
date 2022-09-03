@@ -58,9 +58,6 @@ header{
             }
         }
         nav{
-            @include breakpoint(md) {
-                padding-top: 1rem;
-            }
             div{
                 div{
                     .linkMenu{

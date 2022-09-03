@@ -1,0 +1,18 @@
+main{
+    .introPages{
+        padding: 50px 80px;
+        line-height: 1.5rem;
+        @include breakpoint(lg) {
+            padding: 50px 60px;
+        }
+        @include breakpoint(xs) {
+            padding: 30px 30px;
+        }
+        h1{
+            padding-bottom: 2rem;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+}

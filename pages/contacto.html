@@ -22,20 +22,20 @@
     
 <!-- Header -->
 
-    <header class="menu stick">
+    <header class="menu">
         <div>
             <a href="../index.html"><img class="logo" src="../img/logo.png" alt="Logo 1.21 colecciones"></a>
         </div>
         
         <!-- Menu principal -->
         
-        <nav class="navbar navbar-expand-md navbar-dark ">
-            <div class="container justify-content-center p-0">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container justify-content-end p-0">
+                <button class="navbar-toggler p-0 border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav text-center">
+                    <div class="navbar-nav text-end pe-1">
                     <a class="nav-link linkMenu" href="../index.html">Inicio</a>
                     <a class="nav-link linkMenu" href="nosotros.html">Nosotros</a>
                     <a class="nav-link linkMenu" href="productos.html">Productos</a>
@@ -61,34 +61,37 @@
         
         <!-- Formulario -->
 
-        <div class="contacto">
-            <form>
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="nombre" aria-describedby="nombre" placeholder="Nombre">
+        <div class="container-fluid contacto">
+            <form class="row">
+                <div class="mb-3 col-12">
+                    <input type="text" class="form-control foco" id="nombre" aria-describedby="nombre" placeholder="Nombre">
                 </div>
                 
-                <div class="mb-3">
-                    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
+                <div class="mb-3 col-12">
+                    <input type="email" class="form-control foco" id="email" aria-describedby="email" placeholder="Email">
                 </div>
                     
-                <select class="form-select mb-3" aria-label="select">
-                    <option selected>Tipo de impresión requerida</option>
-                    <option value="1">Plástico (FDM)</option>
-                    <option value="2">Resina (DLP)</option>
-                    <option value="3">No lo se</option>
-                </select>
-                
-                <div class="mb-3">
-                    <input class="form-control" type="file" id="formFileMultiple" multiple>
+                <div class="mb-3 col-12">
+                    <select class="form-select foco" aria-label="select">
+                        <option selected>Tipo de impresión requerida</option>
+                        <option value="1">Plástico (FDM)</option>
+                        <option value="2">Resina (DLP)</option>
+                        <option value="3">No lo se</option>
+                    </select>
                 </div>
                 
-                <div class="mb-3">
-                    <textarea class="form-control" id="textarea" rows="3"  placeholder="Describinos tu idea"></textarea>
+                <div class="mb-3 col-12">
+                    <input class="form-control foco" type="file" id="formFileMultiple" multiple>
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Borrar</button>    
+                <div class="mb-3 col-12">
+                    <textarea class="form-control foco" id="textarea" rows="3"  placeholder="Describinos tu idea"></textarea>
+                </div>
                 
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <div class="col-12 d-flex">
+                    <button type="submit" class="btn botonBorrar">Borrar</button>
+                    <button type="submit" class="btn botonEnviar">Enviar</button>
+                </div>
             </form>
 
             <!-- Mapa -->

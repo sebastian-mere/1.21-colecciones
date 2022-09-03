@@ -72,8 +72,6 @@ main{
         }
         @include breakpoint(xs) {
             padding: 30px 30px;
-        }
-        @include breakpoint(xxs) {
             grid-template-columns: repeat(1, 1fr);
         }
         .itemGaleria{
