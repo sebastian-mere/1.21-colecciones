@@ -1,4 +1,5 @@
 main{
+    background-color: map-get($map: $color, $key: bg-claro);
     .productos{
         padding: 0px 80px 50px 80px;
         display: grid;
@@ -30,6 +31,38 @@ main{
             p{
                 font-size: 16px;
                 padding-bottom: 16px;
+            }
+        }
+    }
+    .popup{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: map-get($map: $color, $key: bg-productos);
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        display: none;
+        backdrop-filter: blur(5px);
+        span{
+            position: absolute;
+            top: 0;
+            right: 2rem;
+            font-size: 2.5rem;
+            font-weight: bolder;
+            cursor: pointer;
+            color: map-get($map: $color, $key: texto-claro);
+            z-index: 101;
+        }
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            object-fit: cover;
+            @include breakpoint(md) {
+                width: 80%;
             }
         }
     }
