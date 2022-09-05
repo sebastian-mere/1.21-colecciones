@@ -12,7 +12,8 @@ main{
         overflow: hidden;
         .bannerPages{
             object-fit: cover;
-            min-width: 100%;
+            width: 100%;
+            min-height: 100%;
         }
     }
     .introPages{

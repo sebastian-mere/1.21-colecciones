@@ -25,7 +25,7 @@ header .banner, main .quienesSomos .imagenNosotros, main .servicios div article 
   background-size: cover;
   background-position: center center; }
 
-header .banner, header .menu, header.menu, .call, main .galeria .itemGaleria .overlay, main .listaServicios {
+header .banner, header .menu, header.menu, .call, main .galeria .itemGaleria .overlay {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -38,7 +38,7 @@ header .banner, header .menu, header.menu, .call, main .galeria .itemGaleria .ov
     transform: scale(1) translateY(0);
     transform-origin: 50% 16%; }
   100% {
-    transform: scale(1.25) translateY(-15px);
+    transform: scale(1.05) translateY(-15px);
     transform-origin: top; } }
 
 .kenburns-right {
@@ -238,7 +238,8 @@ main .contenedorBanner {
   overflow: hidden; }
   main .contenedorBanner .bannerPages {
     object-fit: cover;
-    min-width: 100%; }
+    width: 100%;
+    min-height: 100%; }
 
 main .introPages {
   padding: 50px 80px;
@@ -422,20 +423,29 @@ main .contenido {
         text-align: left; } }
 
 main .quienesSomos {
-  padding: 0px 80px;
+  padding: 50px 80px;
   display: grid;
-  grid-template-areas: "p2Nosotros imgNosotros";
+  grid-template-areas: "h1Nosotros imgNosotros" "p1Nosotros imgNosotros" "p2Nosotros imgNosotros" "p3Nosotros imgNosotros";
   gap: 2rem;
   line-height: 1.5rem; }
   @media screen and (max-width: 992px) {
     main .quienesSomos {
-      padding: 0px 60px;
-      grid-template-areas: "imgNosotros" "p2Nosotros"; } }
+      padding: 50px 60px;
+      grid-template-areas: "h1Nosotros" "p1Nosotros" "imgNosotros" "p2Nosotros" "p3Nosotros"; } }
   @media screen and (max-width: 480px) {
     main .quienesSomos {
-      padding: 0px 30px; } }
+      padding: 30px 30px; } }
+  main .quienesSomos h1 {
+    grid-area: h1Nosotros; }
+  main .quienesSomos .p1 {
+    font-size: 20px;
+    grid-area: p1Nosotros; }
   main .quienesSomos .p2 {
     grid-area: p2Nosotros;
+    margin-bottom: 0; }
+  main .quienesSomos .p3 {
+    grid-area: p3Nosotros;
+    font-weight: 900;
     margin-bottom: 0; }
   main .quienesSomos .imagenNosotros {
     background-image: url(../img/fdm.jpg);
@@ -447,43 +457,32 @@ main .quienesSomos {
         width: 100%; } }
 
 main .listaServicios {
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
   padding: 20px 80px 70px 80px;
   text-align: center;
   gap: 2rem; }
   @media screen and (max-width: 992px) {
     main .listaServicios {
       padding: 0px 60px 70px 60px;
-      justify-content: space-around; } }
-  @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media screen and (max-width: 480px) {
     main .listaServicios {
-      padding: 0px 30px 70px 30px;
-      flex-wrap: wrap; } }
+      grid-template-columns: repeat(1, 1fr); } }
   main .listaServicios h2 {
     font-size: 21px;
     padding-bottom: 1rem; }
   main .listaServicios img {
-    width: 75%; }
-    @media screen and (max-width: 768px) {
+    width: 40%; }
+    @media screen and (max-width: 992px) {
       main .listaServicios img {
-        width: 50%; } }
-    @media screen and (max-width: 600px) {
-      main .listaServicios img {
-        width: 25%; } }
+        width: 30%; } }
     @media screen and (max-width: 320px) {
       main .listaServicios img {
         width: 60%; } }
   main .listaServicios a {
     color: #000; }
-  @media screen and (max-width: 992px) {
-    main .listaServicios div {
-      width: 40%; } }
-  @media screen and (max-width: 768px) {
-    main .listaServicios div {
-      width: 45%; } }
-  @media screen and (max-width: 600px) {
-    main .listaServicios div {
-      width: 100%; } }
 
 main {
   background-color: #dfdfdf; }
@@ -509,7 +508,8 @@ main {
       border-bottom: 2px solid #437cbf; }
       main .productos article img {
         width: 100%;
-        padding-bottom: 10px; }
+        padding-bottom: 10px;
+        cursor: pointer; }
       main .productos article h2 {
         font-size: 21px;
         padding-bottom: 10px; }
@@ -541,7 +541,8 @@ main {
       left: 50%;
       transform: translate(-50%, -50%);
       width: 50%;
-      object-fit: cover; }
+      object-fit: cover;
+      cursor: pointer; }
       @media screen and (max-width: 768px) {
         main .popup img {
           width: 80%; } }
