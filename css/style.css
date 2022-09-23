@@ -80,7 +80,7 @@ header {
       position: unset;
       z-index: 1; } }
   header .banner {
-    background-image: url("../img/header.png");
+    background-image: url("../img/header.jpg");
     height: 100vh; }
     header .banner .cita {
       flex-direction: column; }
