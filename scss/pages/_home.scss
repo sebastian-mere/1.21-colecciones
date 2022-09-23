@@ -134,15 +134,20 @@ main{
         iframe{
             width: 100%;
             height: 100%;
-            @include breakpoint(md) {
-                height: 300px;
-            }
         }
         .videoFDM{
+            min-height: 40vh;
             grid-area: videoFDM;
+            @include breakpoint(lg) {
+                min-height: auto;
+            }
         }
         .videoDLP{
+            min-height: 40vh;
             grid-area: videoDLP;
+            @include breakpoint(lg) {
+                min-height: auto;
+            }
         }
         .textoDer{
             text-align: left;

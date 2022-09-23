@@ -15,7 +15,7 @@
   * h1 {
     font-size: 35px; }
   * p {
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 0; }
   * a {
     font-family: 'Roboto Condensed', sans-serif;
@@ -40,39 +40,6 @@ header .banner, header .menu, header.menu, .call, main .galeria .itemGaleria .ov
   100% {
     transform: scale(1.05) translateY(-15px);
     transform-origin: top; } }
-
-.kenburns-right {
-  animation: kenburns-right 5s ease-out both; }
-
-@keyframes kenburns-right {
-  0% {
-    transform: scale(1) translate(0, 0);
-    transform-origin: 84% 50%; }
-  100% {
-    transform: scale(1.25) translateX(20px);
-    transform-origin: right; } }
-
-.kenburns-bottom {
-  animation: kenburns-bottom 5s ease-out both; }
-
-@keyframes kenburns-bottom {
-  0% {
-    transform: scale(1) translateY(0);
-    transform-origin: 50% 84%; }
-  100% {
-    transform: scale(1.25) translateY(15px);
-    transform-origin: bottom; } }
-
-.kenburns-left {
-  animation: kenburns-left 5s ease-out both; }
-
-@keyframes kenburns-left {
-  0% {
-    transform: scale(1) translate(0, 0);
-    transform-origin: 16% 50%; }
-  100% {
-    transform: scale(1.25) translate(-20px, 15px);
-    transform-origin: left; } }
 
 .text-shadow-drop-bottom {
   animation: text-shadow-drop-bottom 0.6s both; }
@@ -234,7 +201,7 @@ body {
   background-color: #dfdfdf; }
 
 main .contenedorBanner {
-  height: 25vh;
+  height: 40vh;
   overflow: hidden; }
   main .contenedorBanner .bannerPages {
     object-fit: cover;
@@ -405,13 +372,18 @@ main .contenido {
   main .contenido iframe {
     width: 100%;
     height: 100%; }
-    @media screen and (max-width: 768px) {
-      main .contenido iframe {
-        height: 300px; } }
   main .contenido .videoFDM {
+    min-height: 40vh;
     grid-area: videoFDM; }
+    @media screen and (max-width: 992px) {
+      main .contenido .videoFDM {
+        min-height: auto; } }
   main .contenido .videoDLP {
+    min-height: 40vh;
     grid-area: videoDLP; }
+    @media screen and (max-width: 992px) {
+      main .contenido .videoDLP {
+        min-height: auto; } }
   main .contenido .textoDer {
     text-align: left;
     grid-area: textoDer; }
@@ -445,7 +417,7 @@ main .quienesSomos {
     margin-bottom: 0; }
   main .quienesSomos .p3 {
     grid-area: p3Nosotros;
-    font-weight: 900;
+    font-weight: bold;
     margin-bottom: 0; }
   main .quienesSomos .imagenNosotros {
     background-image: url(../img/fdm.jpg);
@@ -560,17 +532,17 @@ main .servicios {
     height: 100%;
     min-height: 40vh; }
   main .servicios div article div .imagenServicio2 {
-    background-image: url(../img/drone.jpg);
+    background-image: url(../img/modelado.jpg);
     min-height: 40vh; }
   main .servicios div article div .imagenServicio3 {
-    background-image: url(../img/figura.jpg);
+    background-image: url(../img/terminacion.jpg);
     height: 100%;
     min-height: 40vh; }
   main .servicios div article div .imagenServicio4 {
-    background-image: url(../img/drone.jpg);
+    background-image: url(../img/escaneo-pieza.jpg);
     min-height: 40vh; }
   main .servicios div article div .imagenServicio5 {
-    background-image: url(../img/escultura.jpg);
+    background-image: url(../img/capacitacion.jpg);
     min-height: 40vh; }
   main .servicios div article div h2 {
     font-size: 24px; }
